@@ -1,5 +1,4 @@
-// import functions and grab DOM elements
-
+import flowers from './flowers.js';
 // initialize state
 
 // set event listeners 
