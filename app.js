@@ -1,7 +1,10 @@
 import flowers from './flowers.js';
-// initialize state
+import { renderFlowers } from './renderFlowers.js';
+console.log(flowers);
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const flowersUL = document.getElementById('flowers');
+
+for (let flower of flowers) {
+    const flowerLI = renderFlowers(flower);
+    flowersUL.appendChild(flowerLI);
+}
