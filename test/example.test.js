@@ -10,10 +10,9 @@ test('returns item by ID', expect => {
         image: 'petunia.jpg',
         meaning: 'I hate you so much I paid to send you these flowers in order to tell you.',
         category: 'Bouquet base',
-        price: '$6.00', 
+        price: 6, 
     };
     const actual = findById(flowers, 1);
-    console.log(actual);
     expect.deepEqual(actual, expected);
 });
  
@@ -37,6 +36,29 @@ test('returns correct total from cart', expect => {
     const actual = calcItemTotal(data, cart);
     expect.equal(expected, actual);
 });
+
+
+
+test('does it render the tables properly', expect => {
+    const testCart = {
+        id: 1,
+        qty: 2
+    };
+    const petunia = {
+        id: 1,
+        name: 'Petunias',
+        image: 'petunia.jpg',
+        meaning: 'I hate you so much I paid to send you these flowers in order to tell you.',
+        category: 'Bouquet base',
+        price: 6,
+    };
+    const expected = `<tr><td>Petunias</td><td>6</td><td>2</td><td>12</td></tr>`;
+    const dom = renderTableRow(testCart, petunia);
+    const html = dom.outerHTML;
+    expect.equal(html, expected);
+});
+
+
 
 // Day 1 test
 // test('will it give me a list item of petunias?', (expect) => {

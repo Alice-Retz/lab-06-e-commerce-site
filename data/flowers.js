@@ -5,7 +5,7 @@ const petunias = {
     image: 'petunia.jpg',
     meaning: 'I hate you so much I paid to send you these flowers in order to tell you.',
     category: 'Bouquet base',
-    price: '$6.00', 
+    price: 6, 
 };
 const tansies = {
     id: 2,
