@@ -1,7 +1,13 @@
 export function findById(items, id){
     for (const item of items){
-        return items;
+        if (item.id === id) {
+        return item;
+        }
     }
+}
+
+export function findById(){
+
 }
 
 export function renderTableRow(cartItem, flowerItem){
