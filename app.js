@@ -1,5 +1,5 @@
 import flowers from './flowers.js';
-import { renderFlowers } from './renderFlowers.js';
+import { renderFlowers } from './renderflowers.js';
 console.log(flowers);
 
 const flowersUL = document.getElementById('flowers');
