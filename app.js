@@ -1,4 +1,4 @@
-import flowers from './flowers.js';
+import flowers from './data/flowers.js';
 import { renderFlowers } from './renderflowers.js';
 console.log(flowers);
 
