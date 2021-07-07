@@ -52,7 +52,7 @@ test('does it render the tables properly', expect => {
         category: 'Bouquet base',
         price: 6,
     };
-    const expected = `<tr><td>Petunias</td><td>6</td><td>2</td><td>12</td></tr>`;
+    const expected = `<tr><td>Petunias</td><td>$6.00</td><td>2</td><td>$12.00</td></tr>`;
     const dom = renderTableRow(testCart, petunia);
     const html = dom.outerHTML;
     expect.equal(html, expected);

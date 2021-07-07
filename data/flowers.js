@@ -13,7 +13,7 @@ const tansies = {
     image: 'tansy.jpg',
     meaning: `Not only do I not like you, but I'm willing to escalate it to violence.`,
     category: 'Bouquet filler',
-    price: '$2.00', 
+    price: 2, 
 };
 const cyclamens = {
     id: 3,
@@ -21,7 +21,7 @@ const cyclamens = {
     image: 'cyclamens.jpg',
     meaning: `We are breaking up, and it's you, not me. `,
     category: 'Potted plant',
-    price: '$7.00', 
+    price: 7, 
 };
 const yCarnations = {
     id: 4,
@@ -29,7 +29,7 @@ const yCarnations = {
     image: 'ycarnations.jpg',
     meaning: `Forget 'just friends', we're not even that.`,
     category: 'Bouquet base',
-    price: '$6.00', 
+    price: 6, 
 };
 const butterflyWeed = {
     id: 5,
@@ -37,7 +37,7 @@ const butterflyWeed = {
     image: 'butterflyweed.jpg',
     meaning: `I'm currently filing for a restraining order in the other tab.`,
     category: 'Bouquet filler',
-    price: '$2.00', 
+    price: 2, 
 };
     
 const flowers = [

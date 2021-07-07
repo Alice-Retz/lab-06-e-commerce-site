@@ -14,7 +14,7 @@ export function renderFlowers(flowers){
     flowerMean.classList.add('productDescription');
 
     const flowerSpan = document.createElement('span');
-    flowerSpan.textContent = `${flowers.category}, ${flowers.price}`;
+    flowerSpan.textContent = `${flowers.category}, $${flowers.price}.00`;
     flowerSpan.classList.add('productPrice');
     
     const button = document.createElement('button');

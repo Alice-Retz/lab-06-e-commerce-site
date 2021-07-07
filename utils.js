@@ -15,14 +15,14 @@ export function calcItemTotal(flowers, cart){
     return orderTotal;
 }
 
-export function renderTableRow(cartItem, flowerItem){
+export function renderTableRow(flowerItem, cartItem){
     const tr = document.createElement('tr');
     const tdName = document.createElement('td');
     tdName.textContent = flowerItem.name;
     tr.appendChild(tdName);
 
     const tdPrice = document.createElement('td');
-    tdPrice.textContent = flowerItem.price;
+    tdPrice.textContent = `$${flowerItem.price}.00`;
     tr.appendChild(tdPrice);
 
     const tdQty = document.createElement('td');
@@ -30,8 +30,9 @@ export function renderTableRow(cartItem, flowerItem){
     tr.appendChild(tdQty);
     
     const tdTotal = document.createElement('td');
+    console.log(flowerItem, cartItem);
     const total = flowerItem.price * cartItem.qty;
-    tdTotal.textContent = total;
+    tdTotal.textContent = `$${total}.00`;
     tr.appendChild(tdTotal);
     
     return tr;
