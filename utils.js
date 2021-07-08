@@ -6,7 +6,11 @@ export function findById(items, id){
     }
 }
 
-export function calcItemTotal(flowers, cart){
+export function calcItemTotal(quantity, price) {
+    return quantity * price;
+}
+
+export function calcOrderTotal(){
     let orderTotal = 0;
     for (let item of cart) {
         const flower = findById(flowers, item.id);
