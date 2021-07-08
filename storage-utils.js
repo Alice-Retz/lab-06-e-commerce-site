@@ -1,6 +1,6 @@
 import { findById } from './utils.js';
 
-export const CART = 'CARTY-MCCART';
+export const CART = 'CART';
 
 export function getCart(){
 
@@ -11,8 +11,8 @@ export function getCart(){
 
 export function addItemtoCart(itemId){
     const cart = getCart();
+    console.log(cart);
     const item = findById(cart, itemId);
-    console.log(item);
     
     if (item) {
         item.qty += 1;

@@ -32,8 +32,8 @@ test('returns correct total from cart', expect => {
         id: 5,
         price: 2
     }];
+    const actual = calcItemTotal(data, cart);
     const expected = 16;
-    const actual = calcItemTotal(cart, data);
     expect.equal(actual, expected);
 });
 

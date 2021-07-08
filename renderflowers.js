@@ -19,6 +19,8 @@ export function renderFlowers(flowers){
     
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
+    button.value = flowers.id;
+    button.classList.add('add');
     
     flowerLI.appendChild(flowerName);
     flowerLI.appendChild(flowerImg);

@@ -1,6 +1,6 @@
 
-const cart = [
-    { id: 1, qty: 2 },
-    { id: 5, qty: 3 },
-];
-export default cart;
+// const cart = [
+//     { id: 1, qty: 2 },
+//     { id: 5, qty: 3 },
+// ];
+// export default cart;
