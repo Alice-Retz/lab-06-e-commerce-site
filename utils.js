@@ -1,3 +1,4 @@
+
 export function findById(items, id){
     for (let item of items){
         if (item.id === id) {
@@ -6,11 +7,8 @@ export function findById(items, id){
     }
 }
 
-export function calcItemTotal(quantity, price) {
-    return quantity * price;
-}
 
-export function calcOrderTotal(){
+export function calcItemTotal(flowers, cart){
     let orderTotal = 0;
     for (let item of cart) {
         const flower = findById(flowers, item.id);

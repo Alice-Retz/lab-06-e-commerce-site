@@ -33,8 +33,8 @@ test('returns correct total from cart', expect => {
         price: 2
     }];
     const expected = 16;
-    const actual = calcItemTotal(data, cart);
-    expect.equal(expected, actual);
+    const actual = calcItemTotal(cart, data);
+    expect.equal(actual, expected);
 });
 
 
@@ -53,7 +53,7 @@ test('does it render the tables properly', expect => {
         price: 6,
     };
     const expected = `<tr><td>Petunias</td><td>$6.00</td><td>2</td><td>$12.00</td></tr>`;
-    const dom = renderTableRow(testCart, petunia);
+    const dom = renderTableRow(petunia, testCart);
     const html = dom.outerHTML;
     expect.equal(html, expected);
 });
