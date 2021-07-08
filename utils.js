@@ -30,7 +30,6 @@ export function renderTableRow(flowerItem, cartItem){
     tr.appendChild(tdQty);
     
     const tdTotal = document.createElement('td');
-    console.log(flowerItem, cartItem);
     const total = flowerItem.price * cartItem.qty;
     tdTotal.textContent = `$${total}.00`;
     tr.appendChild(tdTotal);

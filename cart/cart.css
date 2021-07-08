@@ -1,6 +1,6 @@
 table {
     border-collapse: collapse;
-    border: 1px solid hotpink;
+    border: 1px solid rgb(69, 91, 165);
 }
 thead {
     background-color: lightblue;
