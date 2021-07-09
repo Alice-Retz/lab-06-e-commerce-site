@@ -1,7 +1,7 @@
 import { findById, calcItemTotal, renderTableRow } from '../utils.js';
 import flowers from '../data/flowers.js';
 // import cart from '../data/cart.js';
-import { getCart, clearCart } from '../storage-utils.js';
+import { getCart, clearCart, CART } from '../storage-utils.js';
 
 const tableBody = document.getElementById('table-body');
 
@@ -25,4 +25,20 @@ const clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', ()=>{
     clearCart();
     location.reload();
+});
+
+
+const placeOrder = document.getElementById('place-order');
+
+placeOrder.addEventListener('click', () => {
+//  display list of contents 
+//  remove the cart from local Storage
+//  redirect user to homepage
+    let stringCart = localStorage.getItem(CART) || '[]';
+    const cart = JSON.parse(stringCart);
+    alert(`Thank you for placing your order: ${JSON.stringify(cart, true, 2)}`);
+    console.log(alert);
+    clearCart();
+    window.location.href = '..';
+   
 });
