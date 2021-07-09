@@ -7,8 +7,12 @@ export function findById(items, id){
     }
 }
 
+export function toUSD(number) {
+    return number.toLocaleString(
+        'en-US', { style: 'currency', currency: 'USD' });
+}
 
-export function calcItemTotal(flowers, cart){
+export function calcOrderTotal(flowers, cart){
     let orderTotal = 0;
     for (let item of cart) {
         const flower = findById(flowers, item.id);
@@ -24,7 +28,7 @@ export function renderTableRow(flowerItem, cartItem){
     tr.appendChild(tdName);
 
     const tdPrice = document.createElement('td');
-    tdPrice.textContent = `$${flowerItem.price}.00`;
+    tdPrice.textContent = toUSD(flowerItem.price);
     tr.appendChild(tdPrice);
 
     const tdQty = document.createElement('td');
@@ -33,7 +37,7 @@ export function renderTableRow(flowerItem, cartItem){
     
     const tdTotal = document.createElement('td');
     const total = flowerItem.price * cartItem.qty;
-    tdTotal.textContent = `$${total}.00`;
+    tdTotal.textContent = toUSD(total);
     tr.appendChild(tdTotal);
     
     return tr;
