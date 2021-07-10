@@ -31,7 +31,7 @@ test('addItemtoCart should update quantity', expect => {
     const fakeCartString = JSON.stringify(fakeCart);
     localStorage.setItem(CART, fakeCartString);
 
-    addItemtoCart(1);
+    addItemtoCart(1, 1);
     const newCart = getCart();
 
     const expected = [
@@ -50,7 +50,7 @@ test('addItemtoCart should add item to cart', expect => {
     const fakeCartString = JSON.stringify(fakeCart);
     localStorage.setItem(CART, fakeCartString);
 
-    addItemtoCart(2);
+    addItemtoCart(2, 1);
     const newCart = getCart();
 
     const expected = [

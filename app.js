@@ -12,7 +12,9 @@ for (let flower of flowers) {
 const addButtons = document.querySelectorAll('.add');
 for (let btn of addButtons) {
     btn.addEventListener('click', (e)=>{
-        addItemtoCart(Number(e.target.value));
-        console.log('clicked');
+        // const select = btn.parentNode.querySelector('.selectMenu').value;
+        const select = document.getElementById(`selectMenu-${e.target.value}`).value;
+        addItemtoCart(Number(e.target.value), Number(select));
     });
 }
+

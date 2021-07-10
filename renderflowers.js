@@ -21,11 +21,19 @@ export function renderFlowers(flowers){
     button.textContent = 'Add to Cart';
     button.value = flowers.id;
     button.classList.add('add');
+
+    const select = document.createElement('select');
+    select.options[select.options.length] = new Option('1', 1);
+    select.options[select.options.length] = new Option('2', 2);
+    select.options[select.options.length] = new Option('3', 3);
+    select.classList.add('selectMenu');
+    select.id = `selectMenu-${flowers.id}`;
     
     flowerLI.appendChild(flowerName);
     flowerLI.appendChild(flowerImg);
     flowerLI.appendChild(flowerMean);
     flowerLI.appendChild(flowerSpan);
+    flowerLI.appendChild(select);
     flowerLI.appendChild(button);
 
     return flowerLI;

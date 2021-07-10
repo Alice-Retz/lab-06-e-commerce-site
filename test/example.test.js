@@ -1,4 +1,4 @@
-import { findById, calcItemTotal, renderTableRow } from '../utils.js';
+import { findById, calcOrderTotal, renderTableRow } from '../utils.js';
 import flowers from '../data/flowers.js';
 import { renderFlowers } from '../renderflowers.js';
 
@@ -33,7 +33,7 @@ test('returns correct total from cart', expect => {
         id: 5,
         price: 2
     }];
-    const actual = calcItemTotal(data, cart);
+    const actual = calcOrderTotal(data, cart);
     const expected = 16;
     expect.equal(actual, expected);
 });
@@ -63,7 +63,7 @@ test('does it render the tables properly', expect => {
 
 
 test('will it give me a list item of petunias?', (expect) => {
-    const petuniasLi = `<li class="flowerItem"><h3>Petunias</h3><img src="./assets/petunia.jpg" alt="Petunias"><span class="productDescription">Meaning: I hate you so much I paid to send you these flowers in order to tell you.</span><span class="productPrice">Bouquet base, $6.00</span><button value="petunias" class="add">Add to Cart</button></li>`;
+    const petuniasLi = `<li class="flowerItem"><h3>Petunias</h3><img src="./assets/petunia.jpg" alt="Petunias"><span class="productDescription">Meaning: I hate you so much I paid to send you these flowers in order to tell you.</span><span class="productPrice">Bouquet base, $6.00</span><select class="selectMenu" id="selectMenu-petunias"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><button value="petunias" class="add">Add to Cart</button></li>`;
     const petunias = {
         id: 'petunias',
         name: 'Petunias',
