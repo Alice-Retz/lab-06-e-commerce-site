@@ -1,6 +1,5 @@
-import { findById, calcItemTotal, renderTableRow } from '../utils.js';
+import { findById, toUSD, calcOrderTotal, renderTableRow } from '../utils.js';
 import flowers from '../data/flowers.js';
-// import cart from '../data/cart.js';
 import { getCart, clearCart, CART } from '../storage-utils.js';
 
 const placeOrder = document.getElementById('place-order');
@@ -19,8 +18,8 @@ function renderCart(){
         tableBody.innerHTML = '';
     }
     const totalDom = document.getElementById('order-total');
-    const total = calcItemTotal(flowers, cart);
-    totalDom.textContent = `$${total}.00`;
+    const total = calcOrderTotal(flowers, cart);
+    totalDom.textContent = toUSD(total);
 }
 renderCart();
 

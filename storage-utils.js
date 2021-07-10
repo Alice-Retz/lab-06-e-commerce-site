@@ -9,18 +9,17 @@ export function getCart(){
     return cart;
 }
 
-export function addItemtoCart(itemId){
+export function addItemtoCart(itemId, qty){
     const cart = getCart();
-    console.log(cart);
     const item = findById(cart, itemId);
     
     if (item) {
-        item.qty += 1;
+        item.qty += qty;
     } else {
-        const newItem = { id: itemId, qty: 1 };
+        const newItem = { id: itemId, qty };
         cart.push(newItem);
+        console.log(newItem);
     }
-    
     setCart(cart);
     
 }
@@ -32,3 +31,6 @@ export function setCart(cart){
 export function clearCart(){
     localStorage.removeItem(CART);
 }
+
+
+// #flowers > li:nth-child(1) > select > option:nth-child(1)
